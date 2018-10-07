@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<head>
+<title>Binary to Decimal Converter</title>
+  <link rel="stylesheet" type="text/css" href="https://lickthecheese.github.io/assets/style.css">
+<script>
+function binToDecimal(binin) {
+  return parseInt(binin, 2);
+};
+function decimalToBinary(decin) {
+  return(Math.abs(decin).toString(2));
+};
+function convertB2D() {
+  document.getElementById("inputText").value = binToDecimal(document.getElementById("inputText").value);
+};
+function convertD2B() {
+  document.getElementById("inputText").value = decimalToBinary(document.getElementById("inputText").value);
+};
+</script>
+</head>
+<body style="font-family: sans-serif;">
+<div class="wrapper">
+  <div class="box">
+    <h1>
+        Binary to Decimal Converter</h1><p class="small"><i>Note: this has a limit of about 310 didgets decimal. This is a
+    limitation of Javascript, and not my fault :(</i></p>
+<textarea id="inputText" cols="45" rows="6"></textarea><br><input type=button onClick="convertB2D()" value="Convert Binary to Decimal">
+<input type=button onClick="convertD2B()" value="Convert Decimal to Binary">
+  </div></div>
+</body>
